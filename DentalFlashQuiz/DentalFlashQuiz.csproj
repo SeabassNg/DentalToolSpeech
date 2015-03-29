@@ -58,7 +58,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -87,19 +87,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <None Include="DentalFlashQuiz_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -117,9 +116,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AirWaterSyringeTip.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AirWaterSyringeTip1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AmalgamCarrier.png" />
@@ -179,9 +175,6 @@
     <None Include="Resources\EndoExplorer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Explorer1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Files.png" />
   </ItemGroup>
   <ItemGroup>
@@ -210,9 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MicroBrush.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MouthMirror1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PerloProbe.png" />
@@ -266,6 +256,16 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\BeautifulFlowPlus.png" />
+    <None Include="Resources\PhosphoricAcidEtchingGel.png" />
+    <None Include="Resources\CarbideBurs.jpg" />
+    <None Include="Resources\GraceyCurettesDoubleEnded.jpg" />
+    <None Include="Resources\TopicalCream.jpg" />
+    <None Include="Resources\HemostaticSolution.jpg" />
+    <None Include="Resources\UniversalBondingAgent.jpg" />
+    <None Include="Resources\UniversalBondingAgent2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

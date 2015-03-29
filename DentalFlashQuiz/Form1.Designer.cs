@@ -1,4 +1,6 @@
-﻿namespace DentalFlashQuiz
+﻿using System.Windows.Forms;
+
+namespace DentalFlashQuiz
 {
     partial class Form1
     {
@@ -22,102 +24,111 @@
 
         #region Windows Form Designer generated code
 
+        private void createLabel(
+            System.Windows.Forms.Label label,
+            int pX,
+            int pY,
+            int sX,
+            int sY,
+            int tabIndex,
+            string name,
+            string tag,
+            string text
+            ) {
+            label = new System.Windows.Forms.Label();
+            label.AutoSize = true;
+            label.Location = new System.Drawing.Point(pX, pY);
+            label.Name = name;
+            label.Size = new System.Drawing.Size(sX, sY);
+            label.TabIndex = tabIndex;
+            label.Tag = tag;
+            label.Text = text;
+            label.Click += new System.EventHandler(this.Object_Click);
+            this.Controls.Add(label);
+        }
+
+        private void createPictureBox(
+            System.Windows.Forms.PictureBox picBox,
+            System.Drawing.Bitmap bitmap,
+            int pX,
+            int pY,
+            int sX,
+            int sY,
+            int tabIndex,
+            string name,
+            string tag
+            ) {
+            picBox.Image = bitmap;
+            picBox.Location = new System.Drawing.Point(pX, pY);
+            picBox.Name = name;
+            picBox.Size = new System.Drawing.Size(sX, sY);
+            picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            picBox.TabIndex = tabIndex;
+            picBox.TabStop = false;
+            picBox.Tag = tag;
+            picBox.Click += new System.EventHandler(this.Object_Click);
+            this.Controls.Add(picBox);
+        }
+
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExplorerL = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ExplorerP = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
             this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.label31 = new System.Windows.Forms.Label();
             this.pictureBox31 = new System.Windows.Forms.PictureBox();
-            this.label32 = new System.Windows.Forms.Label();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.label34 = new System.Windows.Forms.Label();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.label35 = new System.Windows.Forms.Label();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.pictureBox36 = new System.Windows.Forms.PictureBox();
-            this.label37 = new System.Windows.Forms.Label();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
-            this.label38 = new System.Windows.Forms.Label();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
-            this.label39 = new System.Windows.Forms.Label();
             this.pictureBox39 = new System.Windows.Forms.PictureBox();
-            this.label40 = new System.Windows.Forms.Label();
             this.pictureBox40 = new System.Windows.Forms.PictureBox();
-            this.label41 = new System.Windows.Forms.Label();
             this.pictureBox41 = new System.Windows.Forms.PictureBox();
-            this.label42 = new System.Windows.Forms.Label();
             this.pictureBox42 = new System.Windows.Forms.PictureBox();
-            this.label43 = new System.Windows.Forms.Label();
             this.pictureBox43 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox44 = new System.Windows.Forms.PictureBox();
+            this.pictureBox45 = new System.Windows.Forms.PictureBox();
+            this.pictureBox46 = new System.Windows.Forms.PictureBox();
+            this.pictureBox47 = new System.Windows.Forms.PictureBox();
+            this.pictureBox48 = new System.Windows.Forms.PictureBox();
+            this.pictureBox49 = new System.Windows.Forms.PictureBox();
+            this.pictureBox50 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ExplorerP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -160,1052 +171,117 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ExplorerL
-            // 
-            this.ExplorerL.AutoSize = true;
-            this.ExplorerL.Location = new System.Drawing.Point(21, 266);
-            this.ExplorerL.Name = "ExplorerL";
-            this.ExplorerL.Size = new System.Drawing.Size(216, 25);
-            this.ExplorerL.TabIndex = 1;
-            this.ExplorerL.Tag = "Air/Water Syringe Tip";
-            this.ExplorerL.Text = "Air/Water Syringe Tip";
-            this.ExplorerL.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 266);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Tag = "Amalgam Carrier";
-            this.label1.Text = "Amalgam Carrier";
-            this.label1.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DentalFlashQuiz.Properties.Resources.AmalgamCarrier;
-            this.pictureBox1.Location = new System.Drawing.Point(269, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 233);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "Amalgam Carrier";
-            this.pictureBox1.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // ExplorerP
-            // 
-            this.ExplorerP.Image = global::DentalFlashQuiz.Properties.Resources.AirWaterSyringeTip;
-            this.ExplorerP.Location = new System.Drawing.Point(51, 30);
-            this.ExplorerP.Name = "ExplorerP";
-            this.ExplorerP.Size = new System.Drawing.Size(143, 233);
-            this.ExplorerP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ExplorerP.TabIndex = 0;
-            this.ExplorerP.TabStop = false;
-            this.ExplorerP.Tag = "Air/Water Syringe Tip";
-            this.ExplorerP.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(449, 266);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Tag = "Anesthetic Syringe Tip";
-            this.label2.Text = "Anesthetic Syringe Tip";
-            this.label2.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DentalFlashQuiz.Properties.Resources.AnestheticSyringeTip;
-            this.pictureBox2.Location = new System.Drawing.Point(451, 30);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "Anesthetic Syringe Tip";
-            this.pictureBox2.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(697, 266);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Tag = "Anterior Sickle Scaler";
-            this.label3.Text = "Anterior Sickle Scaler";
-            this.label3.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DentalFlashQuiz.Properties.Resources.AnteriorSickleScaler;
-            this.pictureBox3.Location = new System.Drawing.Point(699, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "Anterior Sickle Scaler";
-            this.pictureBox3.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DentalFlashQuiz.Properties.Resources.BallBurnisher;
-            this.pictureBox4.Location = new System.Drawing.Point(934, 30);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Tag = "Anterior Sickle Scaler";
-            this.pictureBox4.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(967, 266);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Tag = "Ball Burnisher";
-            this.label5.Text = "Ball Burnisher";
-            this.label5.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 544);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 25);
-            this.label4.TabIndex = 12;
-            this.label4.Tag = "Bib";
-            this.label4.Text = "Bib";
-            this.label4.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DentalFlashQuiz.Properties.Resources.Bib;
-            this.pictureBox5.Location = new System.Drawing.Point(26, 308);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Tag = "Bib";
-            this.pictureBox5.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(300, 544);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 25);
-            this.label6.TabIndex = 14;
-            this.label6.Tag = "Bite Paper";
-            this.label6.Text = "Bite Paper";
-            this.label6.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::DentalFlashQuiz.Properties.Resources.BitePaper;
-            this.pictureBox6.Location = new System.Drawing.Point(252, 308);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "Bite Paper";
-            this.pictureBox6.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(496, 544);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 25);
-            this.label7.TabIndex = 16;
-            this.label7.Tag = "Bite Paper Holder";
-            this.label7.Text = "Bite Paper Holder";
-            this.label7.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::DentalFlashQuiz.Properties.Resources.BitePaperHolder;
-            this.pictureBox7.Location = new System.Drawing.Point(477, 308);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 15;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Tag = "Bite Paper Holder";
-            this.pictureBox7.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(754, 544);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 25);
-            this.label8.TabIndex = 18;
-            this.label8.Tag = "Bur Block";
-            this.label8.Text = "Bur Block";
-            this.label8.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::DentalFlashQuiz.Properties.Resources.BurBlock;
-            this.pictureBox8.Location = new System.Drawing.Point(699, 308);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Tag = "Bur Block";
-            this.pictureBox8.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(948, 544);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(183, 25);
-            this.label9.TabIndex = 20;
-            this.label9.Tag = "Bur Medium Size";
-            this.label9.Text = "Bur(Medium Size)";
-            this.label9.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = global::DentalFlashQuiz.Properties.Resources.BurMediumSize;
-            this.pictureBox9.Location = new System.Drawing.Point(934, 308);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 19;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Tag = "Bur Medium Size";
-            this.pictureBox9.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(87, 808);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 25);
-            this.label10.TabIndex = 22;
-            this.label10.Tag = "Carver";
-            this.label10.Text = "Carver";
-            this.label10.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::DentalFlashQuiz.Properties.Resources.Carver;
-            this.pictureBox10.Location = new System.Drawing.Point(26, 572);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 21;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Tag = "Carver";
-            this.pictureBox10.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(300, 808);
-            this.label11.Name = "label11";
-            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(128, 25);
-            this.label11.TabIndex = 24;
-            this.label11.Tag = "Cavitron Tip";
-            this.label11.Text = "Cavitron Tip";
-            this.label11.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Image = global::DentalFlashQuiz.Properties.Resources.CavitronTip;
-            this.pictureBox11.Location = new System.Drawing.Point(252, 572);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 23;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Tag = "Cavitron Tip";
-            this.pictureBox11.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(536, 808);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(93, 25);
-            this.label12.TabIndex = 26;
-            this.label12.Tag = "Chamfer";
-            this.label12.Text = "Chamfer";
-            this.label12.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Image = global::DentalFlashQuiz.Properties.Resources.Chamfer;
-            this.pictureBox12.Location = new System.Drawing.Point(477, 572);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 25;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Tag = "Chamfer";
-            this.pictureBox12.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(761, 808);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label13.Size = new System.Drawing.Size(117, 25);
-            this.label13.TabIndex = 28;
-            this.label13.Tag = "Condenser";
-            this.label13.Text = "Condenser";
-            this.label13.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::DentalFlashQuiz.Properties.Resources.Condenser;
-            this.pictureBox13.Location = new System.Drawing.Point(702, 572);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 27;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Tag = "Condenser";
-            this.pictureBox13.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(982, 808);
-            this.label14.Name = "label14";
-            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label14.Size = new System.Drawing.Size(131, 25);
-            this.label14.TabIndex = 30;
-            this.label14.Tag = "Cord Packer";
-            this.label14.Text = "Cord Packer";
-            this.label14.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Image = global::DentalFlashQuiz.Properties.Resources.CordPacker;
-            this.pictureBox14.Location = new System.Drawing.Point(934, 572);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 29;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Tag = "Cord Packer";
-            this.pictureBox14.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(74, 1072);
-            this.label15.Name = "label15";
-            this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label15.Size = new System.Drawing.Size(124, 25);
-            this.label15.TabIndex = 32;
-            this.label15.Tag = "Cotton Plier";
-            this.label15.Text = "Cotton Plier";
-            this.label15.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Image = global::DentalFlashQuiz.Properties.Resources.CottonPlier;
-            this.pictureBox15.Location = new System.Drawing.Point(26, 836);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox15.TabIndex = 31;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Tag = "Cotton Plier";
-            this.pictureBox15.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(300, 1072);
-            this.label16.Name = "label16";
-            this.label16.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label16.Size = new System.Drawing.Size(118, 25);
-            this.label16.TabIndex = 34;
-            this.label16.Tag = "Cotton Roll";
-            this.label16.Text = "Cotton Roll";
-            this.label16.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Image = global::DentalFlashQuiz.Properties.Resources.CottonRoll;
-            this.pictureBox16.Location = new System.Drawing.Point(252, 836);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 33;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Tag = "Cotton Roll";
-            this.pictureBox16.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(516, 1072);
-            this.label17.Name = "label17";
-            this.label17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label17.Size = new System.Drawing.Size(134, 25);
-            this.label17.TabIndex = 36;
-            this.label17.Tag = "Cotton Swab";
-            this.label17.Text = "Cotton Swab";
-            this.label17.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.Image = global::DentalFlashQuiz.Properties.Resources.CottonSwab;
-            this.pictureBox17.Location = new System.Drawing.Point(477, 836);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox17.TabIndex = 35;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Tag = "Cotton Swab";
-            this.pictureBox17.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(697, 1072);
-            this.label18.Name = "label18";
-            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label18.Size = new System.Drawing.Size(219, 25);
-            this.label18.TabIndex = 38;
-            this.label18.Tag = "Diamond Football Bur";
-            this.label18.Text = "Diamond/Football Bur";
-            this.label18.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Image = global::DentalFlashQuiz.Properties.Resources.Diamond_FootballBur;
-            this.pictureBox18.Location = new System.Drawing.Point(702, 836);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox18.TabIndex = 37;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Tag = "Diamond Football Bur";
-            this.pictureBox18.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(965, 1072);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(148, 25);
-            this.label19.TabIndex = 40;
-            this.label19.Tag = "Endo Explorer";
-            this.label19.Text = "Endo Explorer";
-            this.label19.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.Image = global::DentalFlashQuiz.Properties.Resources.EndoExplorer;
-            this.pictureBox19.Location = new System.Drawing.Point(934, 836);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox19.TabIndex = 39;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Tag = "Endo Explorer";
-            this.pictureBox19.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(85, 1336);
-            this.label20.Name = "label20";
-            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label20.Size = new System.Drawing.Size(92, 25);
-            this.label20.TabIndex = 42;
-            this.label20.Tag = "Explorer";
-            this.label20.Text = "Explorer";
-            this.label20.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.Image = global::DentalFlashQuiz.Properties.Resources.Explorer;
-            this.pictureBox20.Location = new System.Drawing.Point(26, 1100);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox20.TabIndex = 41;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Tag = "Explorer";
-            this.pictureBox20.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(328, 1336);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label21.Size = new System.Drawing.Size(58, 25);
-            this.label21.TabIndex = 44;
-            this.label21.Tag = "Files";
-            this.label21.Text = "Files";
-            this.label21.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.Image = global::DentalFlashQuiz.Properties.Resources.Files;
-            this.pictureBox21.Location = new System.Drawing.Point(252, 1100);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox21.TabIndex = 43;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Tag = "Files";
-            this.pictureBox21.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(525, 1336);
-            this.label22.Name = "label22";
-            this.label22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label22.Size = new System.Drawing.Size(116, 25);
-            this.label22.TabIndex = 46;
-            this.label22.Tag = "Flat Ended";
-            this.label22.Text = "Flat Ended";
-            this.label22.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = global::DentalFlashQuiz.Properties.Resources.FlatEnded;
-            this.pictureBox22.Location = new System.Drawing.Point(477, 1100);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox22.TabIndex = 45;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.Tag = "Flat Ended";
-            this.pictureBox22.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(775, 1336);
-            this.label23.Name = "label23";
-            this.label23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label23.Size = new System.Drawing.Size(64, 25);
-            this.label23.TabIndex = 48;
-            this.label23.Tag = "Floss";
-            this.label23.Text = "Floss";
-            this.label23.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.Image = global::DentalFlashQuiz.Properties.Resources.Floss;
-            this.pictureBox23.Location = new System.Drawing.Point(702, 1100);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox23.TabIndex = 47;
-            this.pictureBox23.TabStop = false;
-            this.pictureBox23.Tag = "Floss";
-            this.pictureBox23.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(1004, 1336);
-            this.label24.Name = "label24";
-            this.label24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label24.Size = new System.Drawing.Size(75, 25);
-            this.label24.TabIndex = 50;
-            this.label24.Tag = "Gauze";
-            this.label24.Text = "Gauze";
-            this.label24.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.Image = global::DentalFlashQuiz.Properties.Resources.Gauze;
-            this.pictureBox24.Location = new System.Drawing.Point(931, 1100);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox24.TabIndex = 49;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Tag = "Gauze";
-            this.pictureBox24.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(3, 1600);
-            this.label25.Name = "label25";
-            this.label25.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label25.Size = new System.Drawing.Size(250, 25);
-            this.label25.TabIndex = 52;
-            this.label25.Tag = "High Speed Hand Speed";
-            this.label25.Text = "High-Speed Hand Speed";
-            this.label25.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.Image = global::DentalFlashQuiz.Properties.Resources.HighSpeedHandSpeed;
-            this.pictureBox25.Location = new System.Drawing.Point(26, 1364);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox25.TabIndex = 51;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Tag = "High Speed Hand Speed";
-            this.pictureBox25.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(247, 1600);
-            this.label26.Name = "label26";
-            this.label26.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label26.Size = new System.Drawing.Size(248, 25);
-            this.label26.TabIndex = 54;
-            this.label26.Tag = "High Volume Suction Tip";
-            this.label26.Text = "High Volume Suction Tip";
-            this.label26.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.Image = global::DentalFlashQuiz.Properties.Resources.HighVolumeSuctionTip;
-            this.pictureBox26.Location = new System.Drawing.Point(252, 1364);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox26.TabIndex = 53;
-            this.pictureBox26.TabStop = false;
-            this.pictureBox26.Tag = "High Volume Suction Tip";
-            this.pictureBox26.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(488, 1600);
-            this.label27.Name = "label27";
-            this.label27.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label27.Size = new System.Drawing.Size(205, 25);
-            this.label27.TabIndex = 56;
-            this.label27.Tag = "Interproximal Carver";
-            this.label27.Text = "Interproximal Carver";
-            this.label27.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.Image = global::DentalFlashQuiz.Properties.Resources.InterproximalCarver;
-            this.pictureBox27.Location = new System.Drawing.Point(477, 1364);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox27.TabIndex = 55;
-            this.pictureBox27.TabStop = false;
-            this.pictureBox27.Tag = "Interproximal Carver";
-            this.pictureBox27.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(713, 1600);
-            this.label28.Name = "label28";
-            this.label28.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label28.Size = new System.Drawing.Size(185, 25);
-            this.label28.TabIndex = 58;
-            this.label28.Tag = "Inverted Cone Bur";
-            this.label28.Text = "Inverted Cone Bur";
-            this.label28.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.Image = global::DentalFlashQuiz.Properties.Resources.InvertedConeBur;
-            this.pictureBox28.Location = new System.Drawing.Point(702, 1364);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox28.TabIndex = 57;
-            this.pictureBox28.TabStop = false;
-            this.pictureBox28.Tag = "Inverted Cone Bur";
-            this.pictureBox28.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(986, 1600);
-            this.label29.Name = "label29";
-            this.label29.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label29.Size = new System.Drawing.Size(114, 25);
-            this.label29.TabIndex = 60;
-            this.label29.Tag = "Metal Dish";
-            this.label29.Text = "Metal Dish";
-            this.label29.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.Image = global::DentalFlashQuiz.Properties.Resources.MetalDish;
-            this.pictureBox29.Location = new System.Drawing.Point(931, 1364);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox29.TabIndex = 59;
-            this.pictureBox29.TabStop = false;
-            this.pictureBox29.Tag = "Metal Dish";
-            this.pictureBox29.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(66, 1864);
-            this.label30.Name = "label30";
-            this.label30.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label30.Size = new System.Drawing.Size(126, 25);
-            this.label30.TabIndex = 62;
-            this.label30.Tag = "Micro brush";
-            this.label30.Text = "Micro-brush";
-            this.label30.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox30
-            // 
-            this.pictureBox30.Image = global::DentalFlashQuiz.Properties.Resources.MicroBrush;
-            this.pictureBox30.Location = new System.Drawing.Point(26, 1628);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox30.TabIndex = 61;
-            this.pictureBox30.TabStop = false;
-            this.pictureBox30.Tag = "Micro brush";
-            this.pictureBox30.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(292, 1864);
-            this.label31.Name = "label31";
-            this.label31.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label31.Size = new System.Drawing.Size(134, 25);
-            this.label31.TabIndex = 64;
-            this.label31.Tag = "Mouth Mirror";
-            this.label31.Text = "Mouth Mirror";
-            this.label31.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox31
-            // 
-            this.pictureBox31.Image = global::DentalFlashQuiz.Properties.Resources.MouthMirror;
-            this.pictureBox31.Location = new System.Drawing.Point(252, 1628);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox31.TabIndex = 63;
-            this.pictureBox31.TabStop = false;
-            this.pictureBox31.Tag = "Mouth Mirror";
-            this.pictureBox31.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(517, 1864);
-            this.label32.Name = "label32";
-            this.label32.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label32.Size = new System.Drawing.Size(125, 25);
-            this.label32.TabIndex = 66;
-            this.label32.Tag = "Perio Probe";
-            this.label32.Text = "Perio Probe";
-            this.label32.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.Image = global::DentalFlashQuiz.Properties.Resources.PerloProbe;
-            this.pictureBox32.Location = new System.Drawing.Point(477, 1628);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox32.TabIndex = 65;
-            this.pictureBox32.TabStop = false;
-            this.pictureBox32.Tag = "Perio Probe";
-            this.pictureBox32.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(751, 1864);
-            this.label33.Name = "label33";
-            this.label33.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label33.Size = new System.Drawing.Size(111, 25);
-            this.label33.TabIndex = 68;
-            this.label33.Tag = "Pointy Bur";
-            this.label33.Text = "Pointy Bur";
-            this.label33.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.Image = global::DentalFlashQuiz.Properties.Resources.PointyBur;
-            this.pictureBox33.Location = new System.Drawing.Point(702, 1628);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox33.TabIndex = 67;
-            this.pictureBox33.TabStop = false;
-            this.pictureBox33.Tag = "Pointy Bur";
-            this.pictureBox33.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(911, 1864);
-            this.label34.Name = "label34";
-            this.label34.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label34.Size = new System.Drawing.Size(229, 25);
-            this.label34.TabIndex = 70;
-            this.label34.Tag = "Posterior Sickle Scaler";
-            this.label34.Text = "Posterior Sickle Scaler";
-            this.label34.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.Image = global::DentalFlashQuiz.Properties.Resources.PosteriorSickleScaler;
-            this.pictureBox34.Location = new System.Drawing.Point(931, 1628);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox34.TabIndex = 69;
-            this.pictureBox34.TabStop = false;
-            this.pictureBox34.Tag = "Posterior Sickle Scaler";
-            this.pictureBox34.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(66, 2128);
-            this.label35.Name = "label35";
-            this.label35.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label35.Size = new System.Drawing.Size(141, 25);
-            this.label35.TabIndex = 72;
-            this.label35.Tag = "Prophy Angle";
-            this.label35.Text = "Prophy Angle";
-            this.label35.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox35
-            // 
-            this.pictureBox35.Image = global::DentalFlashQuiz.Properties.Resources.ProphyAngle;
-            this.pictureBox35.Location = new System.Drawing.Point(26, 1892);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox35.TabIndex = 71;
-            this.pictureBox35.TabStop = false;
-            this.pictureBox35.Tag = "Prophy Angle";
-            this.pictureBox35.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(292, 2128);
-            this.label36.Name = "label36";
-            this.label36.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label36.Size = new System.Drawing.Size(141, 25);
-            this.label36.TabIndex = 74;
-            this.label36.Tag = "Prophy Paste";
-            this.label36.Text = "Prophy Paste";
-            this.label36.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox36
-            // 
-            this.pictureBox36.Image = global::DentalFlashQuiz.Properties.Resources.ProphyPaste;
-            this.pictureBox36.Location = new System.Drawing.Point(252, 1892);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox36.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox36.TabIndex = 73;
-            this.pictureBox36.TabStop = false;
-            this.pictureBox36.Tag = "Prophy Paste";
-            this.pictureBox36.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(545, 2128);
-            this.label37.Name = "label37";
-            this.label37.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label37.Size = new System.Drawing.Size(75, 25);
-            this.label37.TabIndex = 76;
-            this.label37.Tag = "Rotary";
-            this.label37.Text = "Rotary";
-            this.label37.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox37
-            // 
-            this.pictureBox37.Image = global::DentalFlashQuiz.Properties.Resources.Rotary;
-            this.pictureBox37.Location = new System.Drawing.Point(477, 1892);
-            this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox37.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox37.TabIndex = 75;
-            this.pictureBox37.TabStop = false;
-            this.pictureBox37.Tag = "Rotary";
-            this.pictureBox37.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(748, 2128);
-            this.label38.Name = "label38";
-            this.label38.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label38.Size = new System.Drawing.Size(114, 25);
-            this.label38.TabIndex = 78;
-            this.label38.Tag = "Round Bur";
-            this.label38.Text = "Round Bur";
-            this.label38.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox38
-            // 
-            this.pictureBox38.Image = global::DentalFlashQuiz.Properties.Resources.RoundBur;
-            this.pictureBox38.Location = new System.Drawing.Point(702, 1892);
-            this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox38.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox38.TabIndex = 77;
-            this.pictureBox38.TabStop = false;
-            this.pictureBox38.Tag = "Round Bur";
-            this.pictureBox38.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(970, 2128);
-            this.label39.Name = "label39";
-            this.label39.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label39.Size = new System.Drawing.Size(144, 25);
-            this.label39.TabIndex = 80;
-            this.label39.Tag = "Saliva Ejector";
-            this.label39.Text = "Saliva Ejector";
-            this.label39.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox39
-            // 
-            this.pictureBox39.Image = global::DentalFlashQuiz.Properties.Resources.SalivaEjector;
-            this.pictureBox39.Location = new System.Drawing.Point(931, 1892);
-            this.pictureBox39.Name = "pictureBox39";
-            this.pictureBox39.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox39.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox39.TabIndex = 79;
-            this.pictureBox39.TabStop = false;
-            this.pictureBox39.Tag = "Saliva Ejector";
-            this.pictureBox39.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(-2, 2392);
-            this.label40.Name = "label40";
-            this.label40.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label40.Size = new System.Drawing.Size(252, 25);
-            this.label40.TabIndex = 82;
-            this.label40.Tag = "Slow Speed Hand Speed";
-            this.label40.Text = "Slow-Speed Hand Speed";
-            this.label40.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox40
-            // 
-            this.pictureBox40.Image = global::DentalFlashQuiz.Properties.Resources.SlowSpeedHandSpeed;
-            this.pictureBox40.Location = new System.Drawing.Point(26, 2156);
-            this.pictureBox40.Name = "pictureBox40";
-            this.pictureBox40.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox40.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox40.TabIndex = 81;
-            this.pictureBox40.TabStop = false;
-            this.pictureBox40.Tag = "Slow Speed Hand Speed";
-            this.pictureBox40.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(309, 2392);
-            this.label41.Name = "label41";
-            this.label41.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label41.Size = new System.Drawing.Size(85, 25);
-            this.label41.TabIndex = 84;
-            this.label41.Tag = "Spatula";
-            this.label41.Text = "Spatula";
-            this.label41.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox41
-            // 
-            this.pictureBox41.Image = global::DentalFlashQuiz.Properties.Resources.Spatula;
-            this.pictureBox41.Location = new System.Drawing.Point(252, 2156);
-            this.pictureBox41.Name = "pictureBox41";
-            this.pictureBox41.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox41.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox41.TabIndex = 83;
-            this.pictureBox41.TabStop = false;
-            this.pictureBox41.Tag = "Spatula";
-            this.pictureBox41.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(546, 2392);
-            this.label42.Name = "label42";
-            this.label42.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label42.Size = new System.Drawing.Size(74, 25);
-            this.label42.TabIndex = 86;
-            this.label42.Tag = "Spoon";
-            this.label42.Text = "Spoon";
-            this.label42.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox42
-            // 
-            this.pictureBox42.Image = global::DentalFlashQuiz.Properties.Resources.Spoon;
-            this.pictureBox42.Location = new System.Drawing.Point(477, 2156);
-            this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox42.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox42.TabIndex = 85;
-            this.pictureBox42.TabStop = false;
-            this.pictureBox42.Tag = "Spoon";
-            this.pictureBox42.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(725, 2392);
-            this.label43.Name = "label43";
-            this.label43.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label43.Size = new System.Drawing.Size(169, 25);
-            this.label43.TabIndex = 88;
-            this.label43.Tag = "Universal Scaler";
-            this.label43.Text = "Universal Scaler";
-            this.label43.Click += new System.EventHandler(this.Object_Click);
-            // 
-            // pictureBox43
-            // 
-            this.pictureBox43.Image = global::DentalFlashQuiz.Properties.Resources.UniversalScaler;
-            this.pictureBox43.Location = new System.Drawing.Point(702, 2156);
-            this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(209, 233);
-            this.pictureBox43.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox43.TabIndex = 87;
-            this.pictureBox43.TabStop = false;
-            this.pictureBox43.Tag = "Universal Scaler";
-            this.pictureBox43.Click += new System.EventHandler(this.Object_Click);
+
+            createLabel(ExplorerL, 21, 266, 216, 25, 1, "ExplorerL", "Air Water Syringe Tip", "Air/Water Syringe Tip");
+            createPictureBox(ExplorerP, global::DentalFlashQuiz.Properties.Resources.AirWaterSyringeTip, 51, 30, 143, 233, 0, "ExplorerP", "Air Water Syringe Tip");
+            createLabel(label1, 256, 266, 172, 35, 3, "label1", "Amalgam Carrier", "Amalgam Carrier");
+            createPictureBox(pictureBox1, global::DentalFlashQuiz.Properties.Resources.AmalgamCarrier, 269, 30, 143, 233, 2, "pictureBox1", "Amalgam Carrier");
+            createLabel(label2, 449, 266, 228, 25, 5, "label2", "Anesthetic Syring Tip", "Anesthetic Syring Tip");
+            createPictureBox(pictureBox2, global::DentalFlashQuiz.Properties.Resources.AnestheticSyringeTip, 451, 30, 209, 233, 4, "pictureBox2", "Anesthetic Syringe Tip");
+            createLabel(label3, 697, 266, 218, 25, 7, "label3", "Anterior Sickle Scaler", "Anterior Sickle Scaler");
+            createPictureBox(pictureBox3, global::DentalFlashQuiz.Properties.Resources.AnteriorSickleScaler, 699, 30, 209, 233, 6, "pictureBox3", "Anterior Sickle Scaler");
+            createLabel(label4, 108, 544, 43, 25, 12, "label4", "Bib", "Bib");
+            createPictureBox(pictureBox4, global::DentalFlashQuiz.Properties.Resources.BallBurnisher, 934, 30, 209, 233, 8, "pictureBox4", "Ball Burnisher");
+            createLabel(label5, 967, 266, 146, 25, 10, "label5", "Ball Burnisher", "Ball Burnisher");
+            createPictureBox(pictureBox5, global::DentalFlashQuiz.Properties.Resources.Bib, 26, 308, 209, 233, 11, "pictureBox5", "Bib");
+            createLabel(label6, 300, 544, 112, 25, 14, "label6", "Bite Paper", "Bite Paper");
+            createPictureBox(pictureBox6, global::DentalFlashQuiz.Properties.Resources.BitePaper, 252, 308, 209, 233, 13, "pictureBox6", "Bite Paper");
+            createLabel(label7, 496, 544, 181, 25, 16, "label7", "Bite Paper Holder", "Bite Paper Holder");
+            createPictureBox(pictureBox7, global::DentalFlashQuiz.Properties.Resources.BitePaperHolder, 477, 308, 209, 233, 15, "pictureBox7", "Bite Paper Holder");
+            createLabel(label8, 754, 544, 104, 25, 18, "label8", "Bur Block", "Bur Block");
+            createPictureBox(pictureBox8, global::DentalFlashQuiz.Properties.Resources.BurBlock, 699, 308, 209, 233, 19, "pictureBox8", "Bur Block");
+            createLabel(label9, 948, 544, 183, 25, 20, "label9", "Bur Medium Size", "Bur(Medium Size)");
+            createPictureBox(pictureBox9, global::DentalFlashQuiz.Properties.Resources.BurMediumSize, 934, 308, 209, 233, 19, "pictureBox9", "Bur Medium Size");
+            createLabel(label10, 87, 808, 76, 25, 22, "label10", "Carver", "Carver");
+            createPictureBox(pictureBox10, global::DentalFlashQuiz.Properties.Resources.Carver, 26, 572, 209, 233, 21, "pictureBox10", "Carver");
+            createLabel(label11, 300, 808, 128, 25, 24, "label11", "Cavitron Tip", "Cavitron Tip");
+            createPictureBox(pictureBox11, global::DentalFlashQuiz.Properties.Resources.CavitronTip, 252, 572, 209, 233, 23, "picturesBox11", "Cavitron Tip");
+            createLabel(label12, 536, 808, 93, 25, 26, "label12", "Chamfer", "Chamfer");
+            createPictureBox(pictureBox12, global::DentalFlashQuiz.Properties.Resources.Chamfer, 477, 572, 209, 233, 25, "pictureBox12", "Chamfer");
+            createLabel(label13, 761, 808, 117, 25, 28, "label13", "Condenser", "Condenser");
+            createPictureBox(pictureBox13, global::DentalFlashQuiz.Properties.Resources.Condenser, 702, 572, 209, 233, 27, "pictureBox13", "Condenser");
+            createLabel(label14, 982, 808, 131, 25, 30, "label14", "Cord Packer", "Cord Packer");
+            createPictureBox(pictureBox14, global::DentalFlashQuiz.Properties.Resources.CordPacker, 934, 572, 209, 233, 29, "pictureBox14", "Cord Packer");
+            createLabel(label15, 74, 1072, 124, 25, 32, "label15", "Cotton Plier", "Cotton Plier");
+            createPictureBox(pictureBox15, global::DentalFlashQuiz.Properties.Resources.CottonPlier, 26, 836, 209, 233, 31, "pictureBox15", "Cotton Plier");
+            createLabel(label16, 300, 1072, 118, 25, 34, "label16", "Cotton Roll", "Cotton Roll");
+            createPictureBox(pictureBox16, global::DentalFlashQuiz.Properties.Resources.CottonRoll, 252, 836, 209, 233, 33, "pictureBox16", "Cotton Roll");
+            createLabel(label17, 516, 1072, 134, 25, 36, "label17", "Cotton Swab", "Cotton Swab");
+            createPictureBox(pictureBox17, global::DentalFlashQuiz.Properties.Resources.CottonSwab, 477, 836, 209, 233, 35, "pictureBox17", "Cotton Swab");
+            createLabel(label18, 697, 1072, 219, 25, 38, "label18", "Diamond Football Bur", "Diamond/Football Bur");
+            createPictureBox(pictureBox18, global::DentalFlashQuiz.Properties.Resources.Diamond_FootballBur, 702, 836, 209, 233, 37, "pictureBox18", "Diamond Football Bur");
+            createLabel(label19, 965, 1072, 148, 25, 40, "label19", "Endo Explorer", "Endo Explorer");
+            createPictureBox(pictureBox19, global::DentalFlashQuiz.Properties.Resources.EndoExplorer, 934, 836, 209, 233, 39, "pictureBox19", "Endo Explorer");
+            createLabel(label20, 85, 1336, 92, 25, 42, "label20", "Explorer", "Explorer");
+            createPictureBox(pictureBox20, global::DentalFlashQuiz.Properties.Resources.Explorer, 26, 1100, 209, 233, 41, "pictureBox20", "Explorer");
+            createLabel(label21, 328, 1336, 58, 25, 44, "label21", "Files", "Files");
+            createPictureBox(pictureBox21, global::DentalFlashQuiz.Properties.Resources.Files, 252, 1100, 209, 233, 43, "pictureBox21", "Files");
+            createLabel(label22, 525, 1336, 116, 25, 46, "label22", "Flat Ended", "Flat Ended");
+            createPictureBox(pictureBox22, global::DentalFlashQuiz.Properties.Resources.FlatEnded, 477, 1100, 209, 233, 45, "pictureBox22", "Flat Ended");
+            createLabel(label23, 775, 1336, 64, 25, 48, "label23", "Floss", "Floss");
+            createPictureBox(pictureBox23, global::DentalFlashQuiz.Properties.Resources.Floss, 702, 1100, 209, 233, 47, "pictureBox23", "Floss");
+            createLabel(label24, 1004, 1336, 75, 25, 50, "label24", "Gauze", "Gauze");
+            createPictureBox(pictureBox24, global::DentalFlashQuiz.Properties.Resources.Gauze, 931, 1100, 209, 233, 49, "pictureBox24", "Gauze");
+            createLabel(label25, 3, 1600, 250, 25, 52, "label25", "High Speed Hand Speed", "High-Speed Hand Speed");
+            createPictureBox(pictureBox25, global::DentalFlashQuiz.Properties.Resources.HighSpeedHandSpeed, 26, 1364, 209, 233, 51, "pictureBox25", "High Speed Hand Speed");
+            createLabel(label26, 247, 1600, 248, 25, 54, "label26", "High Volume Suction Tip", "High Volume Suction Tip");
+            createPictureBox(pictureBox26, global::DentalFlashQuiz.Properties.Resources.HighVolumeSuctionTip, 252, 1364, 209, 233, 53, "pictureBox26", "High Volume Suction Tip");
+            createLabel(label27, 488, 1600, 205, 25, 56, "label27", "Interproximal Carver", "Interproximal Carver");
+            createPictureBox(pictureBox27, global::DentalFlashQuiz.Properties.Resources.InterproximalCarver, 477, 1364, 209, 233, 55, "pictureBox27", "Interproximal Carver");
+            createLabel(label28, 713, 1600, 185, 25, 58, "label28", "Inverted Cone Bur", "Inverted Cone Bur");
+            createPictureBox(pictureBox28, global::DentalFlashQuiz.Properties.Resources.InvertedConeBur, 702, 1364, 209, 233, 57, "pictureBox28", "Inverted Cone Bur");
+            createLabel(label29, 986, 1600, 114, 25, 60, "label29", "Metal Dish", "Metal Dish");
+            createPictureBox(pictureBox29, global::DentalFlashQuiz.Properties.Resources.MetalDish, 931, 1364, 209, 233, 59, "pictureBox29", "Metal Dish");
+            createLabel(label30, 66, 1864, 126, 25, 62, "label30", "Micro brush", "Micro-brush");
+            createPictureBox(pictureBox30, global::DentalFlashQuiz.Properties.Resources.MicroBrush, 26, 1628, 209, 233, 61, "pictureBox30", "Micro brush");
+            createLabel(label31, 292, 1864, 134, 25, 64, "label31", "Mouth Mirror", "Mouth Mirror");
+            createPictureBox(pictureBox31, global::DentalFlashQuiz.Properties.Resources.MouthMirror, 252, 1628, 209, 233, 63, "pictureBox31", "Mouth Mirro");
+            createLabel(label32, 517, 1864, 125, 25, 66, "label32", "Perio Probe", "Perio Probe");
+            createPictureBox(pictureBox32, global::DentalFlashQuiz.Properties.Resources.PerloProbe, 577, 1628, 209, 233, 65, "pictureBox32", "Perio Probe");
+            createLabel(label33, 751, 1864, 111, 25, 68, "label33", "Pointy Bur", "Pointy Bur");
+            createPictureBox(pictureBox33, global::DentalFlashQuiz.Properties.Resources.PointyBur, 702, 1628, 209, 233, 67, "pictureBox33", "Pointy Bur");
+            createLabel(label34, 911, 1864, 229, 25, 70, "label34", "Posterior Sickle Scaler", "Posterior Sickle Scaler");
+            createPictureBox(pictureBox34, global::DentalFlashQuiz.Properties.Resources.PosteriorSickleScaler, 931, 1628, 209, 233, 69, "pictureBox34", "Posterior Sickle Scaler");
+            createLabel(label35, 66, 2128, 141, 25, 72, "label35", "Prophy Angle", "Prophy Angle");
+            createPictureBox(pictureBox35, global::DentalFlashQuiz.Properties.Resources.ProphyAngle, 26, 1892, 209, 233, 71, "pictureBox35", "Prophy Angle");
+            createLabel(label36, 292, 2128, 141, 25, 74, "label36", "Prophy Paste", "Prophy Paste");
+            createPictureBox(pictureBox36, global::DentalFlashQuiz.Properties.Resources.ProphyPaste, 252, 1892, 209, 233, 73, "pictureBox36", "Prophy Paste");
+            createLabel(label37, 545, 2128, 75, 25, 76, "label37", "Rotary", "Rotary");
+            createPictureBox(pictureBox37, global::DentalFlashQuiz.Properties.Resources.Rotary, 477, 1892, 209, 233, 75, "pictureBox37", "Rotary");
+            createLabel(label38, 748, 2128, 114, 25, 78, "label38", "Round Bur", "Round Bur");
+            createPictureBox(pictureBox38, global::DentalFlashQuiz.Properties.Resources.RoundBur, 702, 1892, 209, 233, 77, "pictureBox38", "Round Bur");
+            createLabel(label39, 970, 2128, 144, 25, 80, "label39", "Saliva Ejector", "Saliva Ejector");
+            createPictureBox(pictureBox39, global::DentalFlashQuiz.Properties.Resources.SalivaEjector, 931, 1892, 209, 233, 79, "pictureBox39", "Saliva Ejector");
+            createLabel(label40, -2, 2392, 252, 25, 82, "label40", "Slow Speed Hand Speed", "Slow Speed Hand Speed");
+            createPictureBox(pictureBox40, global::DentalFlashQuiz.Properties.Resources.SlowSpeedHandSpeed, 26, 2156, 209, 233, 81, "pictureBox40", "Slow Speed Hand Speed");
+            createLabel(label41, 309, 2392, 85, 25, 84, "label41", "Spatula", "Spatula");
+            createPictureBox(pictureBox41, global::DentalFlashQuiz.Properties.Resources.Spatula, 252, 2156, 209, 233, 83, "pictureBox41", "Spatula");
+            createLabel(label42, 546, 2392, 74, 25, 86, "label42", "Spoon", "Spoon");
+            createPictureBox(pictureBox42, global::DentalFlashQuiz.Properties.Resources.Spoon, 477, 2156, 209, 233, 85, "pictureBox42", "Spoon");
+            createLabel(label43, 725, 2392, 169, 25, 88, "label43", "Universal Scaler", "Universal Scaler");
+            createPictureBox(pictureBox43, global::DentalFlashQuiz.Properties.Resources.UniversalScaler, 702, 2156, 209, 233, 87, "pictureBox43", "Universal Scaler");
+            createLabel(label44, 970, 2392, 169, 25, 89, "label44", "Beautiful Flow Plus", "Beautiful Flow Plus");
+            createPictureBox(pictureBox44, global::DentalFlashQuiz.Properties.Resources.BeautifulFlowPlus, 931, 2156, 209, 233, 90, "pictureBox44", "Beautiful Flow Plus");
+            createLabel(label45, -10, 2656, 169, 25, 91, "label45", "Phosphoric Acid Etching Gel", "Phosphoric Acid Etching Gel");
+            createPictureBox(pictureBox45, global::DentalFlashQuiz.Properties.Resources.PhosphoricAcidEtchingGel, 26, 2420, 209, 233, 92, "pictureBox45", "Phosphoric Acid Etching Gel");
+            createLabel(label46, 250, 2656, 169, 25, 91, "label46", "Universal Bonding Agent", "Universal Bonding Agent");
+            createPictureBox(pictureBox46, global::DentalFlashQuiz.Properties.Resources.UniversalBondingAgent, 252, 2420, 209, 233, 92, "pictureBox46", "Universal Bonding Agent");
+            createLabel(label47, 490, 2656, 169, 25, 91, "label47", "Hemostatic Solution", "Hemostatic Solution");
+            createPictureBox(pictureBox47, global::DentalFlashQuiz.Properties.Resources.HemostaticSolution, 477, 2420, 209, 233, 92, "pictureBox47", "Hemostatic Solution");
+            createLabel(label48, 700, 2656, 169, 25, 91, "label48", "Topical Cream", "Topical Cream");
+            createPictureBox(pictureBox48, global::DentalFlashQuiz.Properties.Resources.TopicalCream, 702, 2420, 209, 233, 92, "pictureBox48", "Topical Cream");
+            createLabel(label49, 910, 2656, 169, 25, 91, "label49", "Gracey Curettes Double Ended", "Gracey Curettes Double Ended");
+            createPictureBox(pictureBox49, global::DentalFlashQuiz.Properties.Resources.GraceyCurettesDoubleEnded, 931, 2420, 209, 233, 92, "pictureBox49", "Gracey Curettes Double Ended");
+            createLabel(label50, 50, 2920, 169, 25, 91, "label50", "Carbide Burs", "Carbide Burs");
+            createPictureBox(pictureBox50, global::DentalFlashQuiz.Properties.Resources.CarbideBurs, 26, 2684, 209, 233, 92, "pictureBox50", "Carbide Burs");
             // 
             // Form1
             // 
@@ -1214,98 +290,59 @@
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1186, 729);
-            this.Controls.Add(this.label43);
+            this.Controls.Add(this.pictureBox50);
+            this.Controls.Add(this.pictureBox49);
+            this.Controls.Add(this.pictureBox48);
+            this.Controls.Add(this.pictureBox47);
+            this.Controls.Add(this.pictureBox46);
+            this.Controls.Add(this.pictureBox45);
+            this.Controls.Add(this.pictureBox44);
             this.Controls.Add(this.pictureBox43);
-            this.Controls.Add(this.label42);
             this.Controls.Add(this.pictureBox42);
-            this.Controls.Add(this.label41);
             this.Controls.Add(this.pictureBox41);
-            this.Controls.Add(this.label40);
             this.Controls.Add(this.pictureBox40);
-            this.Controls.Add(this.label39);
             this.Controls.Add(this.pictureBox39);
-            this.Controls.Add(this.label38);
             this.Controls.Add(this.pictureBox38);
-            this.Controls.Add(this.label37);
             this.Controls.Add(this.pictureBox37);
-            this.Controls.Add(this.label36);
             this.Controls.Add(this.pictureBox36);
-            this.Controls.Add(this.label35);
             this.Controls.Add(this.pictureBox35);
-            this.Controls.Add(this.label34);
             this.Controls.Add(this.pictureBox34);
-            this.Controls.Add(this.label33);
             this.Controls.Add(this.pictureBox33);
-            this.Controls.Add(this.label32);
             this.Controls.Add(this.pictureBox32);
-            this.Controls.Add(this.label31);
             this.Controls.Add(this.pictureBox31);
-            this.Controls.Add(this.label30);
             this.Controls.Add(this.pictureBox30);
-            this.Controls.Add(this.label29);
             this.Controls.Add(this.pictureBox29);
-            this.Controls.Add(this.label28);
             this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.label27);
             this.Controls.Add(this.pictureBox27);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.label25);
             this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.label23);
             this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.label22);
             this.Controls.Add(this.pictureBox22);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.label18);
             this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.label17);
             this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ExplorerL);
-            this.Controls.Add(this.ExplorerP);
             this.Name = "Form1";
             this.Text = "Dental Flash Quiz";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExplorerP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1348,9 +385,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -1443,7 +486,20 @@
         private System.Windows.Forms.PictureBox pictureBox42;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.PictureBox pictureBox43;
-
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.PictureBox pictureBox44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.PictureBox pictureBox45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.PictureBox pictureBox46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.PictureBox pictureBox47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.PictureBox pictureBox48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.PictureBox pictureBox49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.PictureBox pictureBox50;
     }
 }
 
